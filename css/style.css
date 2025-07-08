@@ -127,7 +127,7 @@ h2 {
 .contact-form-section label {
   margin: 0.5rem 0 0.2rem;
   font-weight: bold;
-  color: #000000;
+  color: #e0d7d7;
   display: block;
 }
 
@@ -136,7 +136,7 @@ h2 {
 .contact-form-section textarea {
   width: 100%;
   padding: 0.8rem;
-  border: 1px solid #131313;
+  border: 1px solid hsl(0, 0%, 0%);
   border-radius: 6px;
   margin-bottom: 1rem;
   font-size: 1rem;
@@ -192,7 +192,7 @@ img:hover {
 }
 
 .font-pink{
-  color: #ffffff;
+  color: #070707;
   font-weight: bold;
   font-family: 'YourFontName';
   font-size: 50px;
@@ -229,7 +229,7 @@ img:hover {
 }
 
 .exp-card {
-  background: url("../bgp.jpg") no-repeat center center fixed;
+background: url("images/bgp.jpg") no-repeat center center fixed;
   background-size: cover; /* ⬅️ Ni penting */
   padding: 25px;
   border-radius: 20px;
@@ -336,7 +336,7 @@ img:hover {
 }
 
 .edu-front {
-  background: url("../bgp.jpg") no-repeat center center;
+background: url("images/bgp.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #ffefef;
   border-radius: 12px;
@@ -423,7 +423,7 @@ img:hover {
   background: #090909;
 }
 .skills-section {
- background: url("../bgp.jpg") no-repeat center center fixed;
+background: url("images/bgp.jpg") no-repeat center center fixed;
   background-size: cover;
   padding: 3rem 1rem;
   max-width: 1000px;
@@ -432,14 +432,66 @@ img:hover {
   box-shadow: 0 4px 12px rgba(141, 117, 117, 0.07);
   text-align: center;
   cursor: pointer;
-  color: #fff; 
+  color: #fff; }
+
+
+.skills-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #f9d923;
+  letter-spacing: 2px;
 }
 
-.skills-section {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../images/bg5.jpg") no-repeat center center;
-  background-size: cover;
-  color: #fff;
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
+
+.skill-box {
+  background: rgba(155, 104, 147, 0.837);
+  border: 1px solid rgba(137, 73, 153, 0.538);
+  padding: 30px;
+  border-radius: 16px;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.skill-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.skill-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fce38a;
+  text-transform: uppercase;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.skill-tags span {
+  background-color: #f38181;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.skill-tags span:hover {
+  background-color: #e94e77;
+}
+
+
 
 
 .skills-section h2 {
@@ -458,16 +510,6 @@ img:hover {
   justify-content: center;
 }
 
-.skill-box {
-  background: url("../bgp.jpg") no-repeat center center;
-  background-size: cover; /* Biar gambar penuh dalam kotak */
-  padding: 1.5rem;
-  border-radius: 10px;
-  flex: 1 1 280px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
-  color: white; /* supaya teks jelas kalau gambar gelap */
-}
 
 
 .skill-box:hover {
@@ -546,7 +588,7 @@ img:hover {
 
 .about-info {
   flex: 2 1 500px;
- background: url("../bgp.jpg") no-repeat center center fixed;
+ background: url("images/bgp.jpg") no-repeat center center fixed;
   background-size: cover;
   padding: 2rem;
   border-radius: 16px;
@@ -620,7 +662,7 @@ img:hover {
 }
 
 .contact-intro a {
-  color: #000000;
+  color: #f0eded;
   font-weight: bold;
   text-decoration: none;
 }
@@ -697,9 +739,41 @@ img:hover {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: url("../bgbaru2.jpg") no-repeat center center fixed;
+ background: url("images/bgbaru2.jpg") no-repeat center center fixed;
   background-size: cover;
   margin: 0;
   padding: 0;
   color: white; 
 }
+
+.social-sidebar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 0 10px 10px 0;
+  z-index: 1000;
+}
+
+.social-sidebar a {
+  margin: 8px 0;
+  transition: transform 0.3s ease;
+}
+
+.social-sidebar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.social-sidebar img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.4);
+}
+
